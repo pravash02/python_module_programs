@@ -1,2 +1,2 @@
 # python_module_programs
-This repository contains the different python module's example
+Contains python codes for different python modules
