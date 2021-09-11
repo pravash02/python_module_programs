@@ -1,5 +1,0 @@
-source .python/envs/bin/activate
-
-pip install streamlit
-pip install watchdog (for better performance of streamlit)
-
