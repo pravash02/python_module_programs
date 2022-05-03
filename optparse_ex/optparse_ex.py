@@ -2,7 +2,7 @@
 # run this py file with arguments
 # you can add arguments in the Edit Configuration option for this .py file.
 # for example -
-# -a upload -s file system
+# -a upload -s file_system
 
 import optparse
 import json
