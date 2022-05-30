@@ -1,0 +1,37 @@
+step 1 -
+    In Terminal
+        brew install postgresql
+        psql postgres
+        create a new role (if required) -
+            CREATE ROLE newUser WITH LOGIN PASSWORD ‘password’;
+            ALTER ROLE newUser CREATEDB;
+
+        CREATE NEWDB;
+
+step 2 -
+    brew services start postgresql
+    brew services stop postgresql (if required)
+
+step 3 -
+    download pgAdmin4
+
+step 4 -
+    Right-click on ‘Servers’ and select Create => Server
+    server address - localhost
+    Leave the default values entered in the boxes
+
+step 5 -
+    Inside that DB -
+        CREATE TABLE accounts (
+            user_id serial PRIMARY KEY,
+            username VARCHAR ( 50 ) UNIQUE NOT NULL,
+            password VARCHAR ( 50 ) NOT NULL,
+            email VARCHAR ( 255 ) UNIQUE NOT NULL,
+            created_on TIMESTAMP NOT NULL,
+                last_login TIMESTAMP
+        );
+
+        INSERT INTO accounts (username, password, email)
+        VALUES ('prav02', 'abc@123', 'prav@gmail.com');
+
+        select * from accounts;

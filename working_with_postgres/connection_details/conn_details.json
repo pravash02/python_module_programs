@@ -1,0 +1,7 @@
+{
+  "host": "localhost",
+  "database": "prav",
+  "user": "pravashpanigrahi",
+  "password": "prav@0411",
+  "port": 5432
+}

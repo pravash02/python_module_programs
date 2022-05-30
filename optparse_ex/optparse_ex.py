@@ -15,12 +15,14 @@ with open(config_file_path) as f:
   dict_config.update(data)
 
 parser = optparse.OptionParser(usage="usage: %prog [option values]", version="%prog 0.1")
-parser.add_option('-a', '--action', help='[upload,download]', dest='action')
+parser.add_option('-a', '--action', help='[update, delete, insert]', dest='action')
+parser.add_option('-t', '--table_name', help='dataset table_name', dest='table_name')
+parser.add_option('-p', '--partition_path', help='partition path of dataset', dest='partition_path')
 parser.add_option('-s', '--system', help='[aws|file_system]', dest='system')
 parser.add_option('-f', '--filename', help='[filename]', dest='filename')
 parser.add_option('-k', '--key', help='[key]', dest='key')
-parser.add_option('-p', '--path', help='[hdfs_path]', dest='hdfs_path',
-                  default=dict_config['default_hdfs_path'])
+# parser.add_option('-h', '--h', help='[hdfs_path]', dest='hdfs_path',
+#                   default=dict_config['default_hdfs_path'])
 parser.add_option('-o', '--operation', help='[s3,hdfs,both]', dest='operation')
 parser.add_option('-d', '--delete_flag', help='[Y, N]', dest='delete_flag', default='N')
 
