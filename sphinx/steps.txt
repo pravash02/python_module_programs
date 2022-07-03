@@ -1,0 +1,42 @@
+
+
+pip install sphinx
+
+sphinx-quickstart -  creates the 'source' and 'build' directory along with the 'conf.py' amd 'Makefile'
+
+build directory - contains the the html templates
+source contains - conf.py, index.rst, static dir, template dir
+
+                  In conf.py, uncomment the below lines -
+                  """
+                        import os
+                        import sys
+                        sys.path.insert(0, os.path.abspath('..'))
+                  """
+
+                  In index.rst, add the modules word to import multiple modules -
+                  """
+                        .. toctree::
+                           :maxdepth: 2
+                           :caption: Contents:
+
+                           modules
+
+                        Indices and tables
+                        ==================
+
+                        * :ref:`genindex`
+                        * :ref:`modindex`
+                        * :ref:`search`
+                  """
+
+In Makefile, Change the below values based on your configuration -
+"""
+    SOURCEDIR     = source
+    BUILDDIR      = build
+"""
+
+Inside the the project directory(where .py files are situated) run below command -
+    sphinx-apidoc -o source .
+
+    make html
