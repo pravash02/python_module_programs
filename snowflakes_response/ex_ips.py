@@ -8,7 +8,6 @@ param = ''
 
 
 def main():
-    print('User input parameter', param)
     res_ips = {}
     status_code = 500
 
@@ -16,6 +15,12 @@ def main():
         # request page
         URL = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519"
         page = requests.get(URL)
+
+        ip_param = sys.argv[1]
+        with open('snowflakes_response/mapping.json', 'r') as data:
+            data = json.load(data)
+        if ip_param in data.keys():
+            param = data[ip_param]
 
         # parse HTML to get the real link
         soup = BeautifulSoup(page.content, "html.parser")
@@ -55,13 +60,13 @@ def main():
 
 if __name__ == '__main__':
     try:
-        ip_param = sys.argv[1]
-        with open('mapping.json', 'r') as data:
-            data = json.load(data)
-        if ip_param in data.keys():
-            param = data[ip_param]
-            main()
-        else:
-            raise ValueError("parameter not found in mapping file")
+        # ip_param = sys.argv[1]
+        # with open('snowflakes_response/mapping.json', 'r') as data:
+        #     data = json.load(data)
+        # if ip_param in data.keys():
+        #     param = data[ip_param]
+        main()
+        # else:
+        #     raise ValueError("parameter not found in mapping file")
     except Exception as e:
-        print("Please enter respective parameter")
+        print(e)
