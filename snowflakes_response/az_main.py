@@ -1,6 +1,8 @@
 from urllib.parse import urlparse, parse_qs
 import json
 import azure.functions as func
+
+
 def main(req: func.HttpRequest) -> str:
     param = ''
     op = urlparse(req)
@@ -14,5 +16,7 @@ def main(req: func.HttpRequest) -> str:
         print(param)
     print(param)
     return param
+
+
 if __name__ == '__main__':
     main(req='http://localhost:7071/api/endpoint?param=AAD')
