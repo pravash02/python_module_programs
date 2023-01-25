@@ -17,7 +17,7 @@ def read_csv_file(file_name):
         with open(f"{file_name}", 'r') as file:
           csvreader = csv.DictReader(file)
           for row in csvreader:
-            print(row)
+            # print(row)
             # deserializing in Python
             user_info = CreatingSchema().load(row)
             print(user_info)
