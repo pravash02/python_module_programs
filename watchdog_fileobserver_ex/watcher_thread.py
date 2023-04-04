@@ -36,7 +36,7 @@ def get_inputs():
 def consume_queue(watchdog_queue):
     print(f"Is Queue empty: {watchdog_queue.empty()}\n")
     while True:
-        if not watchdog_queue.empty0:
+        if not watchdog_queue.empty():
             print(f"Is Queue empty: {watchdog_queue.empty()}")
             pool = Pool()
             pool.apply_async(migration_function, (watchdog_queue.get(), ))
@@ -47,7 +47,7 @@ def consume_queue(watchdog_queue):
 def migration_function(get_event):
     print(f"Process started for event: {get_event}")
     dir_path = ntpath.abspath(get_event)
-    file_name = ntpath.basename (get_event)
+    file_name = ntpath.basename(get_event)
     if len(get_event) > 0:
         print(f"Files created: {get_event}")
         main(dir_path)
@@ -71,7 +71,7 @@ class Handler(PatternMatchingEventHandler):
         print(f"Wait while the transfer of the file is finished before processing it")
         file_size = -1
         while file_size != os.path.getsize(event.src_path):
-            file_size = os.path. getsize (event.src_path)
+            file_size = os.path. getsize(event.src_path)
             time.sleep(1)
 
         self.process(event)
@@ -79,15 +79,18 @@ class Handler(PatternMatchingEventHandler):
 
 if __name__ == '__main__':
     dir_path, extract_type = get_inputs()
+
     watchdog_queue = Queue()
     print(f"Starting Worker Thread")
-    worker = threading.Thread (target=consume_queue, name="Watchdog", args= (watchdog_queue,), daemon=True)
+    worker = threading.Thread(target=consume_queue, name="Watchdog", args=(watchdog_queue,), daemon=True)
     worker.start()
+
     print(f"Starting Watchdog Observer\n")
     event_handler = Handler(watchdog_queue, extract_type)
     observer = Observer()
     observer.schedule(event_handler, dir_path, recursive=False)
     observer.start()
+
     try:
         while True:
             time.sleep(1)

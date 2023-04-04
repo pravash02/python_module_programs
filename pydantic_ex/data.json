@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Python: Going Beyond Basic String Formatting using f-string",
+    "subtitle": "Faster and More Efficient String Formatting with Python’s f-Strings",
+    "author": "Pravash",
+    "publisher": "Python Community",
+    "publishing_no": "1",
+    "verification_no": "978-0753555194",
+    "price": 20.20,
+    "author2": {
+      "name": "Peter",
+      "verified": true
+    }
+  },
+  {
+    "title": "Python: Boost Your Python Analysis with Polars",
+    "subtitle": "A faster and more memory-efficient alternative to Pandas",
+    "author": "Pravash",
+    "publisher": "Python Community",
+    "publishing_no": "2",
+    "verification_no": "978-0670921607",
+    "price": 40
+  },
+  {
+    "title": "Spark: Core Concepts and Performance Optimization",
+    "author": "Spark for ETL processing",
+    "publisher": "Python Community",
+    "publishing_no": "3",
+    "verification_no": "978-0241491515",
+    "price": 85.58
+  },
+  {
+    "title": "Python: Habbits that give away inexperience",
+    "subtitle": "Dump Python Newbie Norms",
+    "author": "Pravash",
+    "publisher": "Python Community",
+    "publishing_no": "4",
+    "verification_no": "978-0062273208",
+    "price": 55.55
+  },
+  {
+    "title": "Git: All you need to know",
+    "subtitle": "Know Git in little detail",
+    "author": "Pravash",
+    "publisher": "Python Community",
+    "publishing_no": "5",
+    "verification_no": "978-0201633610",
+    "price": 100
+  }
+]
