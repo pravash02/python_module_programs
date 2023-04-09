@@ -5,3 +5,5 @@ sphinx_ex
    :maxdepth: 4
 
    sphinx_ex
+   sphinx_ex2
+   sphinx_ex3
