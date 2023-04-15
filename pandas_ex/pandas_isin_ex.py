@@ -17,3 +17,4 @@ data2 = pd.read_csv("sample_2.csv")
 
 new_df2 = data2.loc[~data2.set_index(list(data2.columns)).index.isin(data1.set_index(list(data1.columns)).index)]
 print(new_df2)
+
