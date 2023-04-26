@@ -20,10 +20,10 @@ for i, row in df.iterrows():
         skill_title = skill['title']
         skill_description = skill['description']
         if not added_code:
-            result_df = result_df.append({'title': title, 'code': code, '': 'ess_skill', 'ess_skills_title': skill_title, 'ess_skills_description': skill_description}, ignore_index=True)
+            result_df = pd.concat([result_df, pd.DataFrame({'title': [title], 'code': [code], '': ['ess_skill'], 'ess_skills_title': [skill_title], 'ess_skills_description': [skill_description]})])
             added_code = True
         else:
-            result_df = result_df.append({'title': '', 'code': '', '': '', 'ess_skills_title': skill_title, 'ess_skills_description': skill_description}, ignore_index=True)
+            result_df = pd.concat([result_df, pd.DataFrame({'title': [''], 'code': [''], '': [''], 'ess_skills_title': [skill_title], 'ess_skills_description': [skill_description]})])
 
 # Set the index of the result DataFrame to the 'title' and 'code' columns
 result_df.set_index(['title', 'code'], inplace=True)
