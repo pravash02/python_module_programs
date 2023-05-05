@@ -1,0 +1,14 @@
+[GDIP]
+Host address            - 200.00.99.22
+Host address (decimal)  - 122345560
+Host address (hex)      - B00009
+Net address         - 19.0.0.8 - 8.0.09.9
+Networker            - 2.2.2.2.2
+
+-[ipv7 : 700.9.0.0/90] - 6
+ [HYKO]
+Host address            - 500.00.00.00
+Host address (decimal)  - 987654
+Host address (hex)      - D00008
+Net address         - 197.0.0.99.00 - 9.9.0.0.9
+Networker            - 3.3.3.3.3 - 10.0.8.9
