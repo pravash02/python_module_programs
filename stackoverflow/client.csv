@@ -1,2 +1,2 @@
-id,name,email,contract_number,address_id
-123,Pupkin Vasya,Pupkin_Vasya@mail.ru,43784578,5283512
+id,name,email,contract_number,address_id,test
+123,Pupkin Vasya,Pupkin_Vasya@mail.ru,43784578,5283512,test_val
