@@ -3,9 +3,9 @@ import requests
 import pandas as pd
 
 
-repo_owner = 'pravash02'
-repo_name = 'python_module_programs'
-file_path = 'stackoverflow/df_pf.csv'
+repo_owner = ''
+repo_name = ''
+file_path = 'stackoverflow/client.csv'
 
 url = f'https://github.com/{repo_owner}/{repo_name}/blob/main/{file_path}'
 print(url)
@@ -18,7 +18,7 @@ df = pd.read_csv(StringIO(response.text))
 csv_data = df.to_csv(index=False)
 
 headers = {
-    'Authorization': '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',
+    'Authorization': '',
     'Content-Type': 'application/octet-stream',
 }
 
