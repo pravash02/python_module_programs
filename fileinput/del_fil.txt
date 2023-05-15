@@ -1,0 +1,4 @@
+id,phone,name,email
+123,79999999999,Pupkin Vasya,Pupkin_Vasya@mail.ru
+id,phone,name,email
+123,79999999999,Pupkin Vasya,Pupkin_Vasya@mail.ru
