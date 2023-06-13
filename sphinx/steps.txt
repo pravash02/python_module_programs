@@ -36,7 +36,7 @@ In Makefile, Change the below values based on your configuration -
     BUILDDIR      = build
 """
 
-If you want to add more module, then youhave to update the modules.rst and you have to create a new rst file for that
+If you want to add more module, then you have to update the modules.rst and you have to create a new rst file for that
 .py file for example -
 new .py file => sphinx_ex2.py and the corresponding rst file inside source => sphinx_ex2.rst
 And in that rst give the path as like this => sphinx_other.sphinx_ex3
@@ -44,4 +44,6 @@ And in that rst give the path as like this => sphinx_other.sphinx_ex3
 Inside the the project directory(where .py files are situated) run below command -
     sphinx-apidoc -o source .
 
-    make html
+    sphinx-build source build
+
+    run the sphinx commands form site-packages folder, ex = user/python/python37/site_packages/sphinx-quickstart
