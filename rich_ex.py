@@ -1,19 +1,7 @@
-import polars as pl
-
-data = {'name': ['Alice', 'Bob', 'Charlie'],
-        'age': [25, 30, 35],
-        'salary': [50000, 60000, 70000]}
-
-df = pl.DataFrame(data)
-
-result = df.lazy().filter(pl.col("age") > 25).select(["name", "age", "salary"])
-print(result)
-
-final_df = result.collect()
-
-print(final_df)
-
-
+# my_list = ["foo", "bar"]
+# from rich import inspect
+# inspect(my_list, methods=True)
+#
 from rich.console import Console
 from rich.table import Table
 
@@ -30,3 +18,28 @@ table.add_row("Dec 16, 2016", "Rogue One: A Star Wars Story", "$1,332,439,889")
 
 console = Console()
 console.print(table)
+
+# from time import sleep
+# from rich.console import Console
+#
+# console = Console()
+# tasks = [f"task {n}" for n in range(1, 11)]
+#
+# with console.status("Working on tasks...") as status:
+#     while tasks:
+#         task = tasks.pop(0)
+#         sleep(1)
+#         console.log(f"{task} complete")
+
+
+from rich.console import Console
+from rich.traceback import install
+install(show_locals=True)
+
+console = Console()
+
+try:
+    # do_something()
+    pass
+except Exception:
+    console.print_exception(show_locals=True)
