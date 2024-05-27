@@ -36,6 +36,7 @@ MANIFEST
 *.manifest
 *.spec
 *.xml
+*.iml
 
 # Installer logs
 pip-log.txt
