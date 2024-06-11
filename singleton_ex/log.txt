@@ -1,0 +1,4 @@
+This is a log message from logger1
+This is a log message from logger2
+This is a log message from logger1
+This is a log message from logger2
